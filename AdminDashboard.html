@@ -1,0 +1,207 @@
+<!doctype html> 
+<html> 
+  <head> 
+    <meta charset="utf-8"> 
+  	<title>Admin Dashboard</title>
+  </head> 
+  <body>
+    <header>
+
+      <nav class="Navigation">
+        <!-- NAVIGATION BAR -->
+        <ul>
+          <a href="Homepage.html"><img src="stoneCareLogo.png" height="100" width="100" alt="Stone Care"></a>                                    
+        </ul>
+        <div class="nav-logo">Admin Dashboard</div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Patients</a></li>
+            <li><a href="#">Doctors</a></li>
+            <li><a href="#">Appointments</a></li>
+            <li><a href="#">Reports</a></li>
+        </ul>
+      </nav>
+    </header>
+                    <!-- ADMIN DASHBOARD -->
+
+     <h2>Dashboard Overview</h2>
+     <!-- Display should be flex(in a row) on top of the page -->
+    <div class="DashboardOverview">
+        <div>
+            <h3>Total Patients</h3>
+            <p>1200</p>   <!-- this is just a placeholder for the real data-->
+        </div>
+        <div>
+            <h3>Total Doctors</h3>
+            <p>93</p>   <!-- this is just a placeholder for the real data-->
+        </div>
+        <div>
+            <h3>Today's Appointments</h3>
+            <p>1200</p>   <!-- this is just a placeholder for the real data-->
+        </div>
+        <div>
+            <h3>Pending Appointments</h3>
+            <p>12</p>   <!-- this is just a placeholder for the real data-->
+        </div>
+    </div>
+
+                    <!-- SEARCH/FILTER DATA -->
+    <div class="tableControls">
+        <input type="text" placeholder="Search Name">
+        <select>
+            <option value="">Filter by Status</option>
+            <option>Pending</option>
+            <option>Confirmed</option>
+            <option>Cancelled</option>
+        </select>
+        <button>Search</button>
+    </div>
+
+                    <!-- APPOINTMENT MANAGEMENT -->
+
+    <div class="AppointmentManagement">
+        <h2>Appointment Management</h2>
+
+        <!-- Appointment Table -->
+         <!-- Need JS to make the table resposive for now it is static -->
+         <table>
+            <thead>
+                <tr>
+                    <th>Patient Name</th>
+                    <th>Doctor</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>John Doe</td>
+                    <td>Dr. Smith</td>
+                    <td>2026-02-15</td>
+                    <td>10:00</td>
+                    <td>Pending</td>
+                    <td>Edit | Delete</td>
+                </tr>
+            </tbody>
+         </table>
+
+                        <!-- Add Appointment Form -->
+          <!-- Need JS for responsiveness -->
+           <div class="AppointmentForm">
+                <input type="text" placeholder="Patient Name">
+                <input type="text" placeholder="Doctor Name">
+                <input type="date">
+                <input type="time">
+                <select>
+                    <option>Pending</option>
+                    <option>Confirmed</option>
+                    <option>Cancelled</option>
+                </select><br>
+                <button>Add Appointment</button>
+           </div>
+    </div>
+
+                <!-- PATIENT MANAGEMENT -->
+
+    <div class="managementSection">
+        <h2>Patient Management</h2>
+        
+        <!-- Patient Management -->
+         <table>
+            <thead>
+                <tr>
+                    <th>Patient Name</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                    <th>Contact</th>
+                    <th>Address</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>John Doe</td>
+                    <td>30</td>
+                    <td>Male</td>
+                    <td>+27 6563 67235</td>
+                    <td>123 main street, Grahamstown</td>
+                    <td>Edit | Delete</td>
+                </tr>
+            </tbody>
+         </table>
+
+                        <!-- Add patient Form -->
+          <div class="ManagementForm">
+            <input type="text" placeholder="Patient Name">
+            <input type="number" placeholder="Age">
+            <select>
+                <option>Male</option>
+                <option>Female</option>
+                <option>Other</option>
+            </select>
+            <input type="text" placeholder="Contact">
+            <input type="text" placeholder="Address">
+            <button>Add Patient</button>
+          </div>
+    </div>
+
+                    <!-- DOCTOR MANAGEMENT -->
+
+    <div class="managementSection">
+        <h2>Doctor Management</h2>
+        <!-- Doctor Table -->
+         <table>
+            <thead>
+                <tr>
+                    <th>Doctor Name</th>
+                    <th>Specialization</th>
+                    <th>Contact</th>
+                    <th>Email</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Dr. Smith</td>
+                    <td>Cardiology</td>
+                    <td>+27 5235 66536</td>
+                    <td>Smith@gmail.com</td>
+                    <td>Edit | Delete</td>
+                </tr>
+            </tbody>
+         </table>
+         <!-- Add Doctor Form (Need JS for responsiveness) -->
+          <div class="ManagementForm">
+            <input type="text" placeholder="Doctor Name">
+            <input type="text" placeholder="Specialization">
+            <input type="text" placeholder="Contact">
+            <input type="email" placeholder="email">
+          </div>
+    </div>
+
+    <footer>
+        <h4>Contact authors: </h4>
+
+        <p>Xabanisa Ahluma: <a href="mailto:ahlumaxabanisa15@gmail.com">ahlumaxabanisa15@gmail.com</a>
+        <br>Nyathi Hlompho: <a href="mailto:noahross200804@gmail.com">noahross200804@gmail.com</a>
+        <br>Conjwayo Lelethu: <a href="mailto:lelethuconjwayo@gmail.com">lelethuconjwayo@gmail.com</a>
+        <br>Chavalala Enelo: <a href="mailto:jane@example.com">Xabanisahluma@gmail.com</a>
+        <br>Mbulaheni Mufunwa: <a href="mailto:jane@example.com">Xabanisahluma@gmail.com</a>
+        </p>
+        
+
+
+        <footer>
+    <p>Authors: 
+        <a href="/author1">Author One</a>, 
+        <a href="/author2">Author Two</a>, 
+        <a href="/author3">Author Three</a>
+    </p>
+    </footer>
+      <p>&copy; 2026 Author Name</p>
+    </footer>
+
+  </body> 
+</html>
