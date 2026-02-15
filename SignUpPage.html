@@ -1,0 +1,82 @@
+<!doctype html> 
+<html> 
+  <head> 
+    <meta charset="utf-8"> 
+  	<title>Stone Care</title>
+  </head> 
+  <body>  	     
+    <header>
+
+      <nav class="Navigation">
+        <!-- NAVIGATION BAR -->
+         <ul>
+          <a href="index.html"><img src="stoneCareLogo.png" height="100" width="100" alt="Stone Care"></a> <!-- PHOTO FOR THE LOGO and 
+                                                      should return to the home/landing page-->
+         </ul>
+      </nav>
+    </header>
+
+    <section>
+      <!-- SIGN UP FORM -->
+
+       <form> <!-- Link the database file -->
+
+        <h2>Personal Details</h2>
+        
+        <label for="fname1">First Name:</label> <!-- FIRST NAME -->
+        <input type="text" id="fname1" name="fname1" placeholder="First Name">
+        <br><br>
+        <label for="lname1">Last Name:</label> <!-- LAST NAME -->
+        <input type="text" id="lname1" name="lname1" placeholder="Last Name">
+        <br><br>
+        <label for="DateOfBirth">Date of bith:</label> <!-- DATE OF BIRTH -->
+        <input type="date" id="DateOfBirth" name="DateOfBirth">
+        <br><br>
+
+        <label for="Gender">Gender:</label> <!-- GENDER -->
+        <select name="Gender" id="Gender">
+          <option value="SelectGender">Select gender</option>
+          <option value="Female">Female</option>
+          <option value="Male">Male</option>
+          <option value="Other">Other</option>
+        </select>
+        
+        <br><br>
+        <label for="ID">Identity/Passport Number:</label> <!-- ID NO. -->
+        <input type="number" id="ID" name="ID" placeholder="Identity/Passport">
+        <br><br>
+        <label for="nationality">Nationality:</label> <!-- Nationality -->
+        <input type="nationality" id="nationality" name="nationality" placeholder="Nationality">
+        <br><br>
+        <label for="Language">Home Language:</label> <!-- Language -->
+        <select name="Language" id="Language">
+          <option value="Select language">Select language</option>
+          <option value="isiXhosa">isiXhosa</option>
+          <option value="isiZulu">isiZulu</option>
+          <option value="Sepedi">Sepedi</option>
+          <option value="Xitsonga">Xitsonga</option>
+          <option value="Afrikaans">Afrikaans</option>
+          <option value="Tshivenga">Tshivenga</option>
+          <option value="SeSotho">SeSotho</option>
+          <option value="siSwati">siSwati</option>
+          <option value="English">English</option>
+          <option value="isiNdebele">isiNdebele</option>
+          <option value="Other">Other</option>
+        </select>
+        <br><br>
+
+         <!-- BUTTONS AND LINKS RELATED TO THE FORM -->
+        <br><br>
+        <input type="Reset" value="Reset">
+        <a href="SignUpStep2.html"><button type="button">Next</button></a>
+        <br>
+        <a href="PatientLoginPage.html">Have an account?  Log in</a>
+        <br>
+        <p>Having trouble logging in?
+          <a href="Authentification.html">Contact us</a>
+        </p>
+        
+       </form>
+    </section>
+  </body> 
+</html>

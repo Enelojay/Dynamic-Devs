@@ -1,0 +1,69 @@
+<!doctype html> 
+<html> 
+  <head> 
+    <meta charset="utf-8"> 
+  	<title>Stone Care</title>
+  </head> 
+  <body>  	     
+    <header>
+
+      <nav class="Navigation">
+        <!-- NAVIGATION BAR -->
+         <ul>
+          <a href="index.html"><img src="stoneCareLogo.png" height="100" width="100" alt="Stone Care"></a> <!-- PHOTO FOR THE LOGO and 
+                                                      should return to the home/landing page-->
+         </ul>
+      </nav>
+    </header>
+
+    <section>
+      <!-- SIGN UP FORM Step 2-->
+
+       <form> <!-- Link the database file -->
+
+        <!-- MEDICAL INFORMATION -->
+
+        <h2> Medical Information and Medical History </h2>
+        <label for="bloodType">Blood Type:</label> <!-- BLOOD TYPE -->
+        <select name="bloodType" id="bloodType">
+          <option value="Select Blood Type">Select Blood Type</option>
+          <option value="A+">A+</option>
+          <option value="A-">A-</option>
+          <option value="B+">B+</option>
+          <option value="B-">B-</option>
+          <option value="AB+">AB+</option>
+          <option value="AB-">AB-</option>
+          <option value="O+">O+</option>
+          <option value="O-">O-</option>
+        </select>
+        <br><br>
+        <label for="condition">Chronic Condition:</label> <!-- CHRONIC CONDITION -->
+        <input type="text" id="condition" name="condition" placeholder="Chronic condition">
+        <br><br>
+        <label for="Medication">Current Medication:</label> <!-- MEDICATION -->
+        <input type="text" id="Medication" name="Medication" placeholder="Medication">
+        <br><br>
+        <label for="allergies">Allergies:</label> <!-- ALLERGIES -->
+        <input type="text" id="allergies" name="allergies" placeholder="Allergies">
+        <br><br>
+        <label for="Surgeries">Past Surgeries:</label> <!-- SURGERIES -->
+        <input type="text" id="Surgeries" name="Surgeries" placeholder="Past Surgeries">
+        <br><br>
+        
+
+         <!-- BUTTONS AND LINKS RELATED TO THE FORM -->
+        <br><br>
+        <input type="Reset" value="Reset">
+        <a href="SignUpStep3.html"><button type="button">Back</button></a>
+        <a href="SignUpStep5.html"><button type="button">Next</button></a>
+        <br>
+        <a href="PatientLoginPage.html">Have an account?  Log in</a>
+        <br>
+        <p>Having trouble logging in?
+          <a href="#">Contact us</a>
+        </p>
+        
+       </form>
+    </section>
+  </body> 
+</html>
