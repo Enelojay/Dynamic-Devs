@@ -7,33 +7,37 @@
   <body>  	     
     <header>
 
-      <nav class="Navigation">
-        <!-- NAVIGATION BAR -->
+     <nav class="Navigation">
          <ul>
-          <a href="index.html"><img src="stoneCareLogo.png" height="100" width="100" alt="Stone Care"></a> <!-- PHOTO FOR THE LOGO and 
-                                                      should return to the home/landing page-->
+          <img src="stoneCareLogo.png" height="200" width="200" alt="Stone Care">
+          <li><a href="Homepage.html">Home</a></li>
+          <li><a href="ContactUs.html">Contact Us</a></li>
+          <li><a href="#about-section">About Us</a></li>
+          <li><a href="Authentification.html">Log in</a></li>
+          <li><a href="SignUpPage.html">Sign up</a></li>
          </ul>
       </nav>
+
     </header>
 
     <section>
-      <!-- SIGN UP FORM -->
+      
 
-       <form> <!-- Link the database file -->
+       <form> 
 
         <h2>Personal Details</h2>
         
-        <label for="fname1">First Name:</label> <!-- FIRST NAME -->
+        <label for="fname1">First Name:</label> 
         <input type="text" id="fname1" name="fname1" placeholder="First Name">
         <br><br>
-        <label for="lname1">Last Name:</label> <!-- LAST NAME -->
+        <label for="lname1">Last Name:</label> 
         <input type="text" id="lname1" name="lname1" placeholder="Last Name">
         <br><br>
-        <label for="DateOfBirth">Date of bith:</label> <!-- DATE OF BIRTH -->
+        <label for="DateOfBirth">Date of bith:</label> 
         <input type="date" id="DateOfBirth" name="DateOfBirth">
         <br><br>
 
-        <label for="Gender">Gender:</label> <!-- GENDER -->
+        <label for="Gender">Gender:</label> 
         <select name="Gender" id="Gender">
           <option value="SelectGender">Select gender</option>
           <option value="Female">Female</option>
@@ -42,13 +46,13 @@
         </select>
         
         <br><br>
-        <label for="ID">Identity/Passport Number:</label> <!-- ID NO. -->
+        <label for="ID">Identity/Passport Number:</label> 
         <input type="number" id="ID" name="ID" placeholder="Identity/Passport">
         <br><br>
-        <label for="nationality">Nationality:</label> <!-- Nationality -->
+        <label for="nationality">Nationality:</label> 
         <input type="nationality" id="nationality" name="nationality" placeholder="Nationality">
         <br><br>
-        <label for="Language">Home Language:</label> <!-- Language -->
+        <label for="Language">Home Language:</label> 
         <select name="Language" id="Language">
           <option value="Select language">Select language</option>
           <option value="isiXhosa">isiXhosa</option>
@@ -65,7 +69,7 @@
         </select>
         <br><br>
 
-         <!-- BUTTONS AND LINKS RELATED TO THE FORM -->
+         
         <br><br>
         <input type="Reset" value="Reset">
         <a href="SignUpStep2.html"><button type="button">Next</button></a>
@@ -73,7 +77,7 @@
         <a href="PatientLoginPage.html">Have an account?  Log in</a>
         <br>
         <p>Having trouble logging in?
-          <a href="Authentification.html">Contact us</a>
+          <a href="ContactUs.html">Contact us</a>
         </p>
         
        </form>

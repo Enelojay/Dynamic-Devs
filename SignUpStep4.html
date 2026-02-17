@@ -8,23 +8,26 @@
     <header>
 
       <nav class="Navigation">
-        <!-- NAVIGATION BAR -->
          <ul>
-          <a href="index.html"><img src="stoneCareLogo.png" height="100" width="100" alt="Stone Care"></a> <!-- PHOTO FOR THE LOGO and 
-                                                      should return to the home/landing page-->
+          <img src="stoneCareLogo.png" height="200" width="200" alt="Stone Care"> 
+          <li><a href="Homepage.html">Home</a></li>
+          <li><a href="ContactUs.html">Contact Us</a></li>
+          <li><a href="#about-section">About Us</a></li>
+          <li><a href="Authentification.html">Log in</a></li>
+          <li><a href="SignUpPage.html">Sign up</a></li>
          </ul>
       </nav>
+
     </header>
 
     <section>
-      <!-- SIGN UP FORM Step 2-->
+    
+       <form> 
 
-       <form> <!-- Link the database file -->
-
-        <!-- MEDICAL INFORMATION -->
+        
 
         <h2> Medical Information and Medical History </h2>
-        <label for="bloodType">Blood Type:</label> <!-- BLOOD TYPE -->
+        <label for="bloodType">Blood Type:</label>
         <select name="bloodType" id="bloodType">
           <option value="Select Blood Type">Select Blood Type</option>
           <option value="A+">A+</option>
@@ -37,21 +40,21 @@
           <option value="O-">O-</option>
         </select>
         <br><br>
-        <label for="condition">Chronic Condition:</label> <!-- CHRONIC CONDITION -->
+        <label for="condition">Chronic Condition:</label> 
         <input type="text" id="condition" name="condition" placeholder="Chronic condition">
         <br><br>
-        <label for="Medication">Current Medication:</label> <!-- MEDICATION -->
+        <label for="Medication">Current Medication:</label> 
         <input type="text" id="Medication" name="Medication" placeholder="Medication">
         <br><br>
-        <label for="allergies">Allergies:</label> <!-- ALLERGIES -->
+        <label for="allergies">Allergies:</label> 
         <input type="text" id="allergies" name="allergies" placeholder="Allergies">
         <br><br>
-        <label for="Surgeries">Past Surgeries:</label> <!-- SURGERIES -->
+        <label for="Surgeries">Past Surgeries:</label> 
         <input type="text" id="Surgeries" name="Surgeries" placeholder="Past Surgeries">
         <br><br>
         
 
-         <!-- BUTTONS AND LINKS RELATED TO THE FORM -->
+       
         <br><br>
         <input type="Reset" value="Reset">
         <a href="SignUpStep3.html"><button type="button">Back</button></a>
@@ -59,8 +62,8 @@
         <br>
         <a href="PatientLoginPage.html">Have an account?  Log in</a>
         <br>
-        <p>Having trouble logging in?
-          <a href="#">Contact us</a>
+        <p>Having trouble logging in?<br>
+          <a href="ContactUs.html">Contact us</a>
         </p>
         
        </form>
