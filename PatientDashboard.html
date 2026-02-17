@@ -1,0 +1,77 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <title>Patient Page</title>
+        <link rel="icon" type="image/jpeg" sizes="42x42" href="logo.jpeg">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <header>
+            <h2>Welcome User</h2>
+        </header>
+        <main>
+            <h3>Appointments</h3>
+            <p>You have no upcoming appointments</p>
+            <button>Book Appointment</button>
+            <h3>Your medical summary</h3>
+            <table border="solid 2px">
+                <th><td>Basic Health Info</td></th>   
+                <tr>
+                    <td>Blood Type</td>
+                    <td>Allergies</td>
+                    <td>Last Visit Date</td>
+                    <td>Assigned Primary Doctor</td>
+                    <td>Vaccination Status</td>
+                </tr>
+                <tr>
+                    <td>AB+</td>
+                    <td>None</td>
+                    <td>16th of January</td>
+                    <td>Dr X</td>
+                    <td>Up to date☺️</td>
+                </tr>
+            </table>
+            <br>
+            <button>Request for Medical Report</button>
+            <h3>Notifications</h3>
+            <p>You have no new notifications</p>
+            
+            
+        </main>
+        <footer>
+            <section class="carousel">
+                <!--Just a placholder for now-->
+                <!-- This section will dynamically load a random health tip from database in futre-->
+                <section class="slides">
+                    <section class="slides" id="slide1">
+                    <h4>Stay Hydrated💧</h4>
+                    <p>Drink 6–8 glasses of water daily.</p>
+                    </section>
+
+                    <section class="slides" id="slide2">
+                    <h4>Daily Exercise</h4>
+                    <p>30 minutes of walking improves heart health.</p>
+                    </section>
+
+                    <section class="slides" id="slide3">
+                    <h4>Manage Stress🧘</h4>
+                    <p>Practice deep breathing or mindfulness to reduce stress.</p>
+                    </section>
+                    <section class="slides" id="slide4">
+                    <h4>Reduce Salt Intake🧂</h4>
+                    <p>Lower sodium helps maintain healthy blood pressure.</p>
+                    </section>
+                </section>
+
+                <input type="radio" name="slides" id="slide1" checked>
+                <input type="radio" name="slides" id="slide2">
+                <input type="radio" name="slides" id="slide3">
+                <input type="radio" name="slides" id="slide4">
+
+
+            </section>
+
+        </footer>
+    </body>
+</html>
