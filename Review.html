@@ -1,0 +1,63 @@
+<!doctype html> 
+<html> 
+  <head> 
+    <meta charset="utf-8"> 
+  	<title>Reviews</title>
+  </head> 
+  <body>  	     
+    <header>
+
+      <header>
+
+            <nav class="Navigation">
+                <!-- NAVIGATION BAR -->
+                <ul>
+                <a href="Homepage.html"><img src="stoneCareLogo.png" height="100" width="100" alt="Stone Care"></a> <!-- PHOTO FOR THE LOGO and 
+                                                      should return to the home/landing page-->
+                <li><a href="Homepage.html">Home</a></li>
+                <li><a href="ContactUs.html">Contact</a></li>
+                <li><a href="AboutPage.html">About Us</a></li>
+                <li><a href="Authentification.html">Log in</a></li>
+                <li><a href="SignUpPage.html">Sign up</a></li>
+                </ul>
+                </nav>
+        </header>
+
+    <section>
+
+                    <!-- REVIEW PAGE -->
+
+      <h1>Leave a review</h1>
+      <p>We value your feedback. Please share your experience.</p>
+      <form action="">
+        <label for="reviewText">Your Review</label>
+        <br>
+        <textarea id="reviewText" rows="6" maxlength="400" placeholder="Tell us about your experience..."></textarea>
+        <br>
+        <label for="stars">Rating</label>
+        <div>
+          <span data-value="1">&#9733</span>
+          <span data-value="2">&#9733</span>
+          <span data-value="3">&#9733</span>
+          <span data-value="4">&#9733</span>
+          <span data-value="5">&#9733</span>
+        </div>
+
+        <label for="name">Your Name(Optional)</label>
+        <input type="text" id="name" placeholder="Name or Initials">
+
+        <div class="consent">
+          <input type="checkbox" id="consent">
+          <label for="consent">
+            I consent to Having my review published on the website.
+          </label>
+        </div>
+        <button type="submit">Submit</button>
+        <div>
+          Thank you for your feedback!
+        </div>
+      </form>
+    </section>
+  </body> 
+
+</html>
