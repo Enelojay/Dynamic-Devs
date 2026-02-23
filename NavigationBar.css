@@ -25,11 +25,12 @@ ul.Navigation li a {
     display: block;
     padding: 20px 16px;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 25px;
     color: black;
     transition: 0.5s ease-in-out; /* Make the links transition smoothly in and out*/
 }
 #logo{
     margin-right: 1200px; /* Space between the logo and the Nav links*/
 }
+
 
