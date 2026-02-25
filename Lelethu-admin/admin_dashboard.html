@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <link rel="stylesheet" href="styleadmin.css">
+        <title> Admin Dashboard</title>
+    </head>
+    
+    <body>
+    
+       <header>
+            <h1>Dashboard</h1>
+            <p>Welcome back ! Here's your overview.</p>
+            <input type="text" placeholder="Search ..">
+        </header>
+    
+        
+
+        <!--Navigation-->
+        <nav class="navigation">
+              <image src ="stoneCareLogo.png" width="198" height="150">
+        
+            <ul>
+                <li>
+                    <i class ="fa-solid fa-house"></i>
+                    <a href="admin_dashboard.html">Dashboard</a><br><br>
+                </li>
+
+                <li>
+                    <i class ="fa-solid fa-calendar"></i>
+                    <a href="appointments.html">Appointments</a><br><br>
+                </li>
+
+                 <li>
+                    <i class ="fa-solid fa-user"></i>
+                    <a href="patients.html">Patients</a><br><br>
+                </li>
+
+                 <li>
+                    <i class ="fa-solid fa-user-doctor"></i>
+                    <a href="doctors.html">Doctors</a><br><br>
+                </li>
+
+                <li >
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                    <a href="logout.html">Sign Out</a>
+                </li>
+                
+           
+   
+            </ul>
+        </nav>
+ 
+        <main>
+
+        <section class="cards-container">
+            <article class="card">
+               
+                <h3> <i class ="fa-solid fa-calendar"></i><br>Appointments</h3>
+                <p>78 appointments today</p>
+            </article>
+            <article class="card">
+                <h3> <i class ="fa-solid fa-clock"></i><br>Pending Approvals</h3>
+                 <p>30 appointments unapproved</p>
+            </article>
+           <article class="card">
+                <h3><i class ="fa-solid fa-user"></i><br>Total Patients</h3>
+                 <p>80 registered patients</p>
+            </article>
+            <article class="card">
+                <h3> <i class ="fa-solid fa-user-doctor"></i><br>Doctors on duty </h3>
+                 <p>20 doctors  </p>
+            </article>
+        </section>
+            
+           
+              
+        </main>
+
+
+        
+        <!--Footer-->
+        <footer>
+            <p>© 2026 Stone Care Hospital</p>
+            <p>Contact: 012-345-6789</p>
+        </footer>
+
+    </body>
+</html>

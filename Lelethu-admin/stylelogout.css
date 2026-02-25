@@ -1,0 +1,30 @@
+body{
+ 
+    margin:0;
+    padding:0;
+    display:grid;
+
+    grid-template-columns: 100px;
+    grid-template-areas:
+    "sidebar main "
+    "sidebar footer";
+    background-color: whitesmoke;
+    font-size: 1.5rem;
+    
+}
+
+.logout{
+    grid-area: main;
+    background-color: white;
+    padding: 25px;
+    justify-content: center;
+    align-items: center;
+  
+}
+
+
+footer{
+    grid-area: footer; 
+    font-size: 0.9rem;
+    width:100%
+}
