@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width",initial-scale=1.0>
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+         <link href="https://fonts.googleapis.com/css2?family=Thermal=swap" rel="stylesheet">
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <link rel="stylesheet" href="styleadmin.css">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.0"></script>
+         
+
+        <title> Admin Dashboard</title>
+    </head>
+    
+    
+
+    <body>
+        <header>
+            <h1>Dashboard</h1>
+        </header>
+
+        
+        <!--Navigation-->
+        <nav class="navigation">
+              <image src ="stoneCareLogo.png" width="198" height="150">
+        
+            <ul>
+                <li>
+                    <i class ="fa-solid fa-house"></i>
+                    <a href="admin_dashboard.html">Dashboard</a><br><br>
+                </li>
+
+                <li>
+                    <i class ="fa-solid fa-calendar"></i>
+                    <a href="appointments.html">Appointments</a><br><br>
+                </li>
+
+                 <li>
+                    <i class ="fa-solid fa-user"></i>
+                    <a href="patients.html">Patients</a><br><br>
+                </li>
+
+                 <li>
+                    <i class ="fa-solid fa-user-doctor"></i>
+                    <a href="doctors.html">Doctors</a><br><br>
+                </li>
+
+                <li >
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                    <a href="logout.html">Sign Out</a>
+                </li>
+                
+           
+   
+            </ul>
+        </nav>
+ 
+        <main>
+        <section class="cards-container">
+            <article class="card">
+                <a href="appointments.html"  class=card_link>
+               
+                <h3> <i class ="fa-solid fa-calendar"></i><br>Appointments</h3>
+                
+                <p id="apptcount">0  Appointments Today</p>
+                </a>
+            </article>
+         
+
+            <article class="card">
+                <a href="appointments.html"  class=card_link>
+                <h3> <i class ="fa-solid fa-clock"></i><br>Pending Approvals</h3>
+                 <p id="pendingcount">0 Pending Appointments</p>
+                 </a>
+            </article>
+   
+           <article class="card">
+                <a href="patients.html"  class=card_link>
+                <h3><i class ="fa-solid fa-user"></i><br>Total Patients</h3>
+                 <p id="patcount">0 registered patients</p>
+                </a>
+            </article>
+        
+            <article class="card">
+                <a href="doctors.html"  class=card_link>
+                <h3> <i class ="fa-solid fa-user-doctor"></i><br>Doctors on duty </h3>
+                 <p id="doccount">0 doctors  </p>
+                </a>
+            </article>
+         
+        </section>
+
+        <article class ="chart">
+        <canvas id="Chart" ></canvas>
+        </article>
+        
+       
+        </main>
+
+        
+        <!--Footer-->
+        <footer>
+            <p>© 2026 Stone Care Hospital</p>
+            <p>Contact: 012-345-6789</p>
+        </footer>
+        
+        <script src="admin_js.js"></script>
+    </body>
+</html>

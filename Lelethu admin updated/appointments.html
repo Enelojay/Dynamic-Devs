@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width",initial-scale=1.0>
+
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <link rel="stylesheet" href="styleforapp.css">
+
+        
+        
+        <title>Appointments</title>
+    </head>
+
+    
+    <body>
+         <header >
+             <button id="menu" class="btn">
+                <i class="fa-solid fa-bars"></i>
+             </button>
+            <h1>Appointments</h1>
+        </header>
+    
+        
+      
+        <!--Navigation-->
+        <nav class="navigation" id="sidebar">
+              <image src ="stoneCareLogo.png" width="198" height="150">
+        
+            <ul>
+                <li>
+                    <i class ="fa-solid fa-house"></i>
+                    <a href="admin_dashboard.html">Dashboard</a><br><br>
+                </li>
+
+                <li>
+                    <i class ="fa-solid fa-calendar"></i>
+                    <a href="appointments.html">Appointments</a><br><br>
+                </li>
+
+                 <li>
+                    <i class ="fa-solid fa-user"></i>
+                    <a href="patients.html">Patients</a><br><br>
+                </li>
+
+                 <li>
+                    <i class ="fa-solid fa-user-doctor"></i>
+                    <a href="doctors.html">Doctors</a><br><br>
+                </li>
+
+                <li >
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                    <a href="logout.html">Sign Out</a><br><br>
+                </li>
+                
+           
+   
+            </ul>
+        </nav>
+
+       <!--Main content-->
+       <main>
+        
+        <section class="controls">
+            <i class="fa-solid fa-magnifying-glass"></i> 
+            <input type="text" id="search" placeholder="Search appointment">
+            
+
+            <label for="forstatus">Filter by status:</label>
+            <select id="forstatus">
+                <option value="All" selected >All </option>
+                <option value="Pending">Pending </option>
+                <option value="Approved">Approved </option>
+                <option value="Declined">Declined </option>
+                <option value="Cancelled">Cancelled </option>
+            </select>
+
+          <!--Dynamic date-->
+
+        </section>
+
+        <section class="tafile">
+        <table id="appointments">
+        <thead>
+        <tr>
+            <th> Patient </th>
+            <th> Doctor </th>
+            <th> Date</th>
+            <th> Time </th>
+            <th> Type</th>
+            <th> Status</th>
+            <th> Actions</th>
+
+            
+        </tr>
+        </thead>
+        <tbody id="appointments-body">
+        </tbody>
+        </table>
+        </section>
+        
+        </main>
+        <!--FOOTEER-->
+        <footer>
+           
+            <p>© 2026 Stone Care Hospital</p>
+            <p>Contact: 012-345-6789</p>
+        </footer>
+        <script src="admin_js.js" defer></script>
+    </body>
+
+</html>
