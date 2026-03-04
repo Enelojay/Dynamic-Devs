@@ -1,0 +1,296 @@
+body {
+    margin: 0;
+    font-family: 'IBM Plex Mono', monospace;
+    background: #f4f6f9;
+}
+/* General body setup */
+/* Header section */
+
+header {
+    background-color: #e3f2fd;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.booking-page {
+  display: flex;
+  gap: 30px;
+  max-width: 1000px;
+  margin: 40px auto;
+}
+.leftside { flex: 2; 
+    display:flex;
+    flex-direction: column;
+     gap:20px;
+}
+.rightside{
+  flex: 1;
+}
+
+.card {
+  background: white;
+  padding: 24px;
+  border-radius: 16px;
+  border: 1px solid #eaeef2;
+  margin-bottom: 20px;
+}
+select {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid #dce2e8;
+  background-color: #f1f5f9;
+  font-size: 1rem;
+  color: #4a5568;
+}
+
+/*Specilists*/
+.specialist , .time-section, .appointment-type, .reason-visit{
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  padding: 30px 40px;
+  margin: 8px 9px;
+}
+.date-section{
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+/* Calendar container */
+/* Remove all calendar borders/gridlines */
+.fc .fc-scrollgrid,
+.fc .fc-scrollgrid-section,
+.fc td,
+.fc th {
+    border: none !important;
+}
+/* Remove selection highlight */
+.fc-highlight,
+.fc-daygrid-day.fc-day-selected {
+    background: transparent !important;
+}
+#booking-calendar {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+/* Style each day cell */
+.fc-daygrid-day {
+    background: transparent;
+    padding: 6px;
+}
+/* Remove weird internal spacing */
+.fc-daygrid-day-frame {
+    padding: 4px !important;
+}
+
+/* Style the number inside each day */
+.fc-daygrid-day-number {
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    border-radius: 10px;
+    display: inline-block;
+    transition: 0.2s ease;
+}
+.fc-daygrid-day-number:hover {
+    background-color: #e3f2fd;
+    cursor: pointer;
+}
+/*Highligbhting currnet date*/
+.fc-day-today .fc-daygrid-day-number {
+    background-color: #d0ebff;
+    font-weight: 600;
+}
+/*Month and year header*/
+.fc-day-today .fc-daygrid-day-number {
+    background-color: #d0ebff;
+    font-weight: 600;
+}
+.fc-button {
+    background: transparent !important;
+    border: none !important;
+    font-size: 18px !important;
+    box-shadow: none !important;
+}
+
+.fc-button:hover {
+    background: #f1f3f5 !important;
+    border-radius: 8px !important;
+}
+.fc-highlight {
+    background: transparent !important;
+}
+.fc-theme-standard .fc-scrollgrid,
+.fc-theme-standard td,
+.fc-theme-standard th {
+    border: none !important;
+}
+
+.booking-section{
+  display: flex;
+  gap: 120px;
+  align-items: flex-start;
+}
+/*
+.book-summary-sec{
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  width: 500px;
+  padding-left: 20px;
+}
+.sum-options{
+  display: flex;
+  flex-direction: column;
+}
+button.selected {
+    background-color: #1976d2; /* example: blue highlight 
+    color: white;
+}*/
+/*Reason for visit section*/
+textarea {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid #dce2e8;
+  background-color: #f1f5f9;
+  font-size: 1rem;
+  color: #4a5568;
+  resize: vertical;      /* allows only vertical resize */
+  min-height: 120px;     /* gives it good height */
+}
+.rightside {
+  background: white;
+  padding: 24px;
+  border-radius: 16px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  max-width: 300px;
+  position: sticky;
+  top: 20px;
+}
+#optional {
+  font-size: 0.8rem;      /* smaller than the title */
+  font-weight: 400;       /* less bold */
+  color: #888;            /* soft grey */
+  margin-left: 6px;       /* small space from title */
+}
+
+.booking-summary {
+  margin: 0 0 20px 0;
+  font-size: 1.2em;
+  color: #333;
+  font-weight: 600;
+}
+
+.sum-options {
+  margin-bottom: 24px;
+}
+
+.sum-option {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  font-size: 0.95em;
+  color: #555;
+}
+
+
+.btn-section {
+  text-align: center;
+}
+
+#confirmbtn {
+  background-color:#365166;
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 12px;
+  font-size: 1em;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 4px 12px #555;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+  width: 100%;
+}
+
+#confirmbtn:hover {
+  background-color: #87aac5 ;
+  box-shadow: 0 6px 16px #87aac5;
+  transform: translateY(-1px);
+}
+
+#confirmbtn span {
+  font-size: 1.1em;
+}
+/*Time section after user clicks date*/
+.time-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+.time-group button.time-btn {
+    background-color: #ffffff;
+    color: #87aac5;
+    font-weight: 300;
+    border: solid 1px #87aac5;
+    border-radius: 999px;   /* pill shape */
+    padding: 15px 25px;      /* smaller horizontal padding for narrow pills */
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: none !important;
+    width: auto;             /* important: don't let it stretch */
+    flex: 0 0 auto;          /* keep buttons from growing in flex container */
+    white-space: nowrap;      /* prevent text wrapping */
+}
+.time-group button.selected {
+    background-color: #1976d2;
+    color: #fff;
+}
+.time-btn{
+  background-color: #ffffff;
+  color:#87aac5;
+  font-weight: 300;       /* remove px */
+  border: solid 1px #87aac5;
+  border-radius: 999px;   /* makes it pill-shaped */
+  padding: 6px 16px;      /* vertical + horizontal padding */
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/*Pop up*/
+#booking-popup {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #9ec4e0;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none; 
+  z-index: 999;
+}
+
+#booking-popup.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+

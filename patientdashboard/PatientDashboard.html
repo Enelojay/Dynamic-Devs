@@ -1,0 +1,219 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <title>Patient Page</title>
+        <link rel="icon" type="image/jpeg" sizes="42x42" href="logo.jpeg">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="PatientDashboard.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,
+                    500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Nunito+Sans:ital,opsz,wght@0,6..12,
+                    200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+        
+    </head>
+    <body>
+        <header class="headerProfile">
+            <div class="header-text">
+                <h2 id="welcomeUser">Good Morning, User</h2>
+                <p>How are you feeling today?</p>
+            </div>
+            <div class="moodSelector">
+                <span class="mood" title="Happy">😄</span>
+                <span class="mood" title="Okay">🙂</span>
+                <span class="mood" title="Neutral">😐</span>
+                <span class="mood" title="Sad">😔</span>
+                <span class="mood" title="Angry">😡</span>
+            </div>
+            
+        </header>
+        <br>
+        <br>
+       
+        <main class="patientdashboardmain">
+            <!-- Hidden checkbox to track sidebar state -->
+            <input type="checkbox" id="menutog">
+            <label for="menutog" class="menubtn">☰</label>
+            <aside class="sidebar">
+                <label for="menutog" class="closebtn">✕</label>
+                <nav class="navLinks">
+                    <a href="PatientDashboard.html"><span class="material-symbols-outlined">dashboard_2</span>Dashboard</a>
+                    <a href="ViewAppointments.html" ><span class="material-symbols-outlined">calendar_today</span>View Appointments</a>
+                    <!--<a href="Reminders.html"> <span class="material-symbols-outlined">notifications</span>Notifications</a>-->
+                    <!--<a href="DoctorMesssage.html"><span class="material-symbols-outlined">pill</span>Medications</a>-->
+                    <a href="PatientProfile.html"><span class="material-symbols-outlined">person</span>My Profile</a>
+                    <a href="PatientFAQ.html"><span class="material-symbols-outlined">edit_note</span>Leave A Review</a>
+                    <a href="PatientFAQ.html"><span class="material-symbols-outlined">help</span>FAQ</a>
+                </nav>
+            </aside>
+            <div class="cardContainer1">
+                <div class="appointment-card"> <!--Appointment card start-->
+                    <div class="card-header">
+                        <h2>Upcoming Appointments</h2>
+                        <a href="ViewAppointments.html" class="view-all">View all</a>
+                    </div>
+
+                    <div class="appointment-list" > <!--appointmt rows-->
+                        <div class="appointment-row">
+                            <div class="doctor-info">
+                                <div class="avatar sc">SC</div>
+                                <div class="details">
+                                    <span class="name">Dr. Sarah Chen</span>
+                                    <span class="specialty">Cardiologist</span>
+                                </div>
+                            </div>
+                            
+                            <div class="date-time">
+                                <div class="info-group">
+                                <span class="material-symbols-outlined icon">calendar_month</span>
+                                <span>Feb 28, 2026</span>
+                                </div>
+                                <div class="info-group">
+                                    <span class="material-symbols-outlined icon">alarm</span>
+                                    <span>10:00 AM</span>
+                                </div>
+                            </div>
+
+                            <div class="status">
+                                <span class="badge in-person">
+                                    <span class="material-symbols-outlined icon">location_on</span>In-person
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!--End of appointments cards-->
+                <div class="medicationsCard ">
+                    <div class="card-header">
+                        <div class="header-left">
+                            <h3>Current Medications</h3>
+                        </div>
+                        <!--<span class="med-count-badge">2/4 taken</span>-->
+                    </div>
+
+                    <div class="medication-list">
+                        <div class="med-item taken">
+                            <div class="med-icon-wrapper">
+                                <span class="check-icon">✓</span>
+                            </div>
+                            <div class="med-details">
+                                <span class="med-name">Lisinopril</span>
+                                <span class="med-dosage">10mg · Once daily</span>
+                            </div>
+                            <div class="med-time">
+                                <span class="material-symbols-outlined icon">alarm</span>08:00 AM
+                            </div>
+                        </div>
+
+                        <div class="med-item">
+                            <div class="med-icon-wrapper pill-icon">
+                                <span class="material-symbols-outlined pill-emoji">pill</span> 
+                            </div>
+                            <div class="med-details">
+                                <span class="med-name">Metformin</span>
+                                <span class="med-dosage">500mg · Twice daily</span>
+                            </div>
+                            <div class="med-time">
+                                 <span class="material-symbols-outlined icon">alarm</span> 12:00 PM
+                            </div>
+                        </div>
+        
+        </div>
+            </div>
+                
+            </div>
+        </div>
+        
+            <div class="medSummaryCard cards">
+                <h3>Your medical summary</h3>
+                    <div class="info-grids">
+                    <div class="info-grid">
+                        <div class="info-card">
+                            <div class="info-card-header">
+                                <div><span class="material-symbols-outlined med-symbol">humidity_high</span>Blood Type</div>
+                                </div>
+                                <div class="info-body">
+                                    <span class="values">120/80 mmHg</span><br>
+                                    <span>Last recorded</span>
+                                </div>
+                        </div>
+                    </div> <!--Grid 1 info-->
+                     <div class="info-grid">
+                        <div class="info-card">
+                            <div class="info-card-header">
+                                <div><span class="material-symbols-outlined med-symbol">cardiology</span>Resting Heart Rate</div>
+                                </div>
+                                <div class="info-body">
+                                    <span class="values">120/80 mmHg</span><br>
+                                    <span>Last recorded</span>
+                                </div>
+                        </div>
+                    </div> <!--Grid 2 info-->
+
+                     <div class="info-grid">
+                        <div class="info-card">
+                            <div class="info-card-header">
+                                <div><span class="material-symbols-outlined med-symbol">allergy</span>Allergies</div>
+                                </div>
+                                <div class="info-body">
+                                    <span class="values">Pork</span><br>
+                                    <span class="values">Ham</span>
+                                </div>
+                            
+                        </div>
+                    </div> <!--Grid 3 info-->
+                    <div class="info-grid">
+                        <div class="info-card">
+                            <div class="info-card-header">
+                                <div><span class="material-symbols-outlined med-symbol">syringe</span>Vaccination Status</div>
+                                 </div>
+                                <div class="info-body">
+                                    <span class="values">Up to date</span><br>
+                                    <span class="values">Nothing much</span>
+                                </div>
+                           
+                        </div>
+                    </div> <!--Grid 4 info-->
+                    </div>
+                <br>
+                <button class="requestMedicalBtn" id="med-btn">Request for Medical Report</button>
+                <!--Report request submit-->
+                <div id="reportToast" class="report-toast">
+                    <span class="material-symbols-outlined">check_circle</span>
+                    <span>Your medical report request has been submitted.</span>
+                </div>
+            </div>
+
+            <div class="graphAndRecents"> 
+             <div class="hospiVisitCard cards">
+                <div class="graph-header">
+                    <h3>Hospital Visits Trends</h3>
+                    <p>Plan your walk in visits</p>
+                </div>
+                <canvas id="visitChart"></canvas>
+            </div>
+             <div class="recentVisitCard cards">
+                <h3 id="recent-visit-heading">Recent Visits</h3>
+                <div class="recent-visit-row">
+                    <p>You last visited Dr. Aris Thorne for a General Wellness Exam on Oct 12, 2025.</p>
+                </div>
+                
+                <div class="recent-visit-row">
+                    <p>You last visited Dr. Elena Rodriguez for Seasonal Allergy Consultation on Jan 14, 2026</p>
+                </div>
+
+            </div>
+            </div>
+   
+        </main>
+        <footer class="carouselfooter">
+            <section class="carousel">
+                <!--Section migth require js, temporarily empty-->
+            </section>
+        </footer>
+    <script src="PatientDashboard.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script> <!--For the email-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!--For the chart-->
+    </body>
+</html>

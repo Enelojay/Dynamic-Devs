@@ -1,0 +1,450 @@
+body{
+    font-family: 'IBM Plex Mono', monospace;
+    background-color: #ffffff;
+    color: #124d5d;
+}
+.headerProfile{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 50px;
+    border-radius: 16px;
+    background-color: #d1ddec;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+#welcomeUser {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #124d5d; 
+}
+.headerProfile p {
+    margin: 5px 0 0 0;
+    color: #124d5d; 
+    font-size: 1rem;
+}
+
+/* Mood Selector Styling */
+.moodSelector {
+    display: flex;
+    gap: 12px;
+    width: 250px;
+    padding-left: -10px;
+    background: #f8fafc; /* Slightly darker background for the "tray" */
+    padding: 10px 20px;
+    border-radius: 50px; 
+}
+.mood {
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, filter 0.2s ease;
+    filter: grayscale(100%); /* Makes them look "inactive" by default */
+    opacity: 0.6;
+}
+.mood:hover {
+    transform: scale(1.2); /* Slight pop on hover */
+    filter: grayscale(0%); /* Brings back color on hover */
+    opacity: 1;
+}
+.mood.selected{
+    background-color: #f0f0f0;
+    color: #4caf50;
+}
+#menutog{  /*hiding the checkbox*/
+    display: none;
+}
+.sidebar{ 
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #ffffff;
+    padding-top: 60px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease;
+}
+#menutog:checked ~ .sidebar{ /*Apply styling when the menu btn is clcked*/
+    left: 0;
+}
+.sidebar nav a{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+}
+
+.sidebar nav a:hover{
+    background-color: #f0f0f0;
+    color: #298aaa;
+}
+/*Closing button*/
+.closebtn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 26px;
+  cursor: pointer;
+  color: #124d5d;
+  user-select: none;
+}
+
+.closebtn:hover {
+  color: #298aaa;
+}
+/*icon styling*/
+.material-symbols-outlined {
+    font-size: 22px;
+    vertical-align: middle; /* makes icon sit nicely with text */
+}
+
+.menubtn{
+    font-size: 28px;
+    border: none;
+    cursor: pointer;
+    position:fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 1000;
+}
+#med-btn{
+    max-width: 450px;
+    max-height: 300px;
+}
+button{
+  background-color:#365166;
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 12px;
+  font-size: 1em;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(76,175,80,0.4);
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+  width: 100%;
+}
+button:hover{
+  background-color: #87aac5 ;
+  box-shadow: 0 6px 16px #87aac5;
+  transform: translateY(-1px);
+}
+table{
+    background-color: #ffe6fe;
+}
+
+/*Appointment and Notification Cards*/
+.cardContainer1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  
+}
+.cards{
+    border: none;
+    box-shadow: 0 0 5px #298aaa;
+    border-radius: 5px;
+    background-color: aliceblue;
+}
+.appointment-card{
+    background: white;
+    border: 1px solid #f1f5f9;;
+    border-radius: 12px;
+    width: 560px;
+    height: 300px;
+    padding: 24px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    font-family: 'Inter', sans-serif;
+}
+.medicationsCard{
+    border-radius: 12px;
+    background-color: white;
+    width: 560px;
+    height: 300px;
+    padding: 24px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);  
+}
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 16px;   
+    margin-bottom: 16px;    
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.appointment-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 0;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.appointment-row:last-child {
+    border-bottom: none;
+}
+
+/* Avatar Styling */
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 0.8rem;
+    margin-right: 12px;
+}
+
+.avatar.sc { background-color: #f0fdfa; color: #0d9488; } /* Teal vibe */
+
+/* Typography */
+.doctor-info{ 
+    display: flex; align-items: center; 
+}
+.details .name{ 
+    display: block; font-weight: 600; color: #1e293b;; 
+}
+.details .specialty{ 
+    font-size: 0.85rem; color:  #64748b;}
+
+.date-time{ 
+    font-size: 0.85rem; 
+    color:  #64748b;
+}
+.info-group {margin-bottom: 4px;}
+
+/* The Pill Badge */
+.badge {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    background: #f0fdf4;;
+    color:#166534;;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+/*Medications Table*/
+/* Medication Card Container */
+
+/* The "2/4 taken" badge 
+.med-count-badge {
+    background-color: #f1f5f9;
+    color: #64748b;
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+*/
+/* Individual Med Row */
+.med-item {
+    display: flex;
+    align-items: center;
+    padding: 16px 0;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.med-item:last-child {
+    border-bottom: none;
+}
+
+/* Icon Styling */
+.med-icon-wrapper {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background-color: #f1f5f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 16px;
+    font-size: 1.2rem;
+}
+
+/* Styling for "Taken" state */
+.med-item.taken .med-icon-wrapper {
+    background-color: #f0fdf4; 
+    color: #166534;
+}
+
+/*
+.med-item.taken .med-name {
+    text-decoration: line-through;  (medication reminders MAY be implemeted later)
+    color: #94a3b8;
+}  */
+
+/* Typography */
+.med-details {
+    flex-grow: 1;
+}
+
+.med-name {
+    display: block;
+    font-weight: 700;
+    color: #1e293b;
+    font-size: 1rem;
+}
+
+.med-dosage {
+    font-size: 0.85rem;
+    color: #94a3b8;
+}
+
+.med-time {
+    font-size: 0.85rem;
+    color: #64748b;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+/*Medical summary table section*/
+.medSummaryCard {
+    padding: 20px;
+    background-color: #f8f9fa;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+.info-grids {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+.info-card {
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    min-width: 180px;
+    flex: 1;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    border: 1px solid #eee;
+}
+.info-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    gap: 5px;
+}
+.values {
+    font-size: 16px;
+    color: #333;
+}
+.med-symbol{
+    padding: 8px;
+    margin-right: 10px;
+    border-radius: 8px;
+    background: #e6f4f1; /* Light teal background for icons */
+}
+
+.medSummaryCard .info-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.requestMedicalBtn{
+    padding: 12px 28px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 6px 6px 12px #e2e8f0, 
+               -6px -6px 12px #ffffff;
+}
+.requestMedicalBtn:hover {
+    transform: translateY(-2px); /* Gentle lift */
+    box-shadow: 8px 8px 16px #cbd5e0, 
+               -8px -8px 16px #ffffff;
+    color: #2d3748;
+}
+
+.medSummaryCard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1200px;
+    height: 300px;
+    margin: 20px auto;
+}
+
+
+/*Graph and recent visit section*/
+.hospiVisitCard{ 
+        background: white;
+    border: 1px solid #f1f5f9;;
+    border-radius: 12px;
+    width: 560px;
+    height: 300px;
+    padding: 24px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    font-family: 'Inter', sans-serif;
+}
+
+.recentVisitCard  {
+    background: white;
+    border: 1px solid #f1f5f9;;
+    border-radius: 12px;
+    width: 560px;
+    height: 300px;
+    padding: 24px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+
+}
+
+.graphAndRecents{
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 20px;
+}
+/*Image coursel*/
+img{
+    width: 350px;
+    height: 450px;
+    border-radius: 100px;
+}
+
+/*Popup message after clicking request for medical report*/
+/* Medical Report Toast */
+.report-toast {
+    position: fixed;
+    background: #9ec4e0;
+    padding: 14px 18px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    bottom: 25px;
+    right: 25px;
+}
+
+.report-toast.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+#visitchart{
+    font-family: 'IBM Plex Mono', monospace;
+}

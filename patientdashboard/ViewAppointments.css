@@ -1,0 +1,261 @@
+body{
+    font-family: 'IBM Plex Mono', monospace;
+    background-color: #ffffff;
+    color: #124d5d;
+    padding: 0 40px;
+  } /*General set up*/
+.page-container {
+    padding: 0 40px;
+}
+header{
+  background-color: #d1ddec;
+  border-radius: 5px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.09);
+}
+button{
+  background-color:#365166;
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 12px;
+  font-size: 1em;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(159, 204, 230, 0.05);
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+}
+button:hover{
+  background-color: #87aac5 ;
+  box-shadow: 0 6px 16px #87aac5;
+  transform: translateY(-1px);
+}
+.btnSection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+}
+
+
+/* Header & Button */
+.dashboard-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;          /* space between logo and title */
+  padding: 20px 40px; /* space from screen edges */
+  margin-bottom: 30px;
+
+}
+
+.page-title {
+  font-size: 30px;
+  font-weight: 700;
+  margin: 0;
+}
+#logo{
+  height: 200px;
+}
+/*Side bar section*/
+.menubtn {
+  font-size: 28px;
+  cursor: pointer;
+  margin-right: 15px;
+  user-select: none;
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -260px;
+  width: 250px;
+  height: 100%;
+  background-color: #ffffff;
+  padding-top: 80px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.08);
+  transition: left 0.3s ease;
+  z-index: 1000;
+}
+
+#menutog{  /*hiding the checkbox*/
+    display: none;
+}
+.sidebar nav a{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+}
+#menutog:checked ~ .sidebar{ /*Apply styling when the menu btn is clcked*/
+    left: 0;
+}
+
+.sidebar nav a:hover{
+    background-color: #f0f0f0;
+    color: #298aaa;
+}
+/*Closing button*/
+.closebtn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 26px;
+  cursor: pointer;
+  color: #124d5d;
+  user-select: none;
+}
+
+.closebtn:hover {
+  color: #298aaa;
+}
+
+
+/* Search and Tabs */
+.search-wrapper {
+    display: flex;
+    align-items: center; 
+    gap: 8px;            
+    margin-bottom: 24px
+}
+
+.search-input {
+    width: 40%;
+    padding: 12px 12px 12px 40px; 
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    background-color: #f8fafc;
+    box-sizing: border-box; 
+}
+.search-input:focus {
+    border-color: #2D9C8B;
+    background-color: white;
+}
+.search-icon {
+    position: absolute;
+    left: 12px;
+    top: 12px;
+    color: #94a3b8;
+}
+/*Upcoming, Completd and Cancelled appointment tabs*/
+.tabs-group {
+    display: flex;
+    background-color: #dfe9f5;
+    width: 30%;
+    padding: 4px;
+    border-radius: 10px;
+    margin-bottom: 32px;
+    gap: 1px;
+}
+
+.tab-item {
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #64748b;
+  font-weight: 500;
+  background-color: #f1f5f9;
+}
+
+.tab-item.active {
+  background-color: white;
+  color: #334155;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Appointment Cards */
+.appointments-list {
+    display: flex;
+    flex-direction: column;   /* THIS makes them go below each other */
+    gap: 2px;                /* adds spacing between cards */
+}
+.appointment-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 20px;
+  border: 1px solid #f1f5f9;
+  border-radius: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.profile-section {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background-color: #ffffff;
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.sc-bg { background-color: #ecfdf5; color: #059669; }
+.mt-bg { background-color: #f0f9ff; color: #0284c7; }
+
+.doctor-name {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.specialty {
+  color: #64748b;
+  margin: 2px 0 0 0;
+  font-size: 14px;
+}
+
+/* Status and Badges */
+.status-section {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.time-info {
+  font-size: 14px;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+.date-row,
+.time-row {
+  display: flex;
+  align-items: center;   
+  gap: 6px;              
+}
+.card-icon {  /* adjusting icon size */
+  font-size: 18px;       
+  line-height: 1;
+  vertical-align: middle;
+}
+.badge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.badge-inperson {
+  background-color: #f0fdfa;
+  color: #115e59;
+}
+
+.badge-virtual {
+  background-color: #f0f9ff;
+  color: #075985;
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <title>Patient Page</title>
+        <link rel="icon" type="image/jpeg" sizes="42x42" href="logo.jpeg">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="PatientDashboard.css">
+        <link rel="stylesheet" href="ViewAppointments.css">
+        <link rel="stylesheet" href="PatientAppointment.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,
+                    500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Nunito+Sans:ital,opsz,wght@0,6..12,
+                    200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+        <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.js'></script> <!--Calendar api-->
+        <link href='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/main.min.css' rel='stylesheet' />
+        <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/main.min.js'></script>
+    </head>
+
+<body>
+    
+    <div class="page-container">
+    <input type="checkbox" id="menutog">
+    <!--Header part of the page-->
+          <header class="dashboard-header">
+          
+          <label for="menutog" class="menubtn">☰</label>
+            <h1 class="page-title">Book Your Appointment</h1>
+            
+            <img src="stoneCareLogo.png" alt="logo" id="logo">
+        </header>
+    <aside class="sidebar">
+            <label for="menutog" class="closebtn">✕</label>
+            <nav class="navLinks">
+                <a href="PatientDashboard.html"><span class="material-symbols-outlined">dashboard_2</span>Dashboard</a>
+                <a href="ViewAppointments.html" ><span class="material-symbols-outlined">calendar_today</span>View Appointments</a>
+                <!--<a href="Reminders.html"> <span class="material-symbols-outlined">notifications</span>Notifications</a>-->
+                <!--<a href="DoctorMesssage.html"><span class="material-symbols-outlined">pill</span>Medications</a>-->
+                <a href="PatientProfile.html"><span class="material-symbols-outlined">person</span>My Profile</a>
+                <a href="PatientFAQ.html"><span class="material-symbols-outlined">edit_note</span>Leave A Review</a>
+                <a href="PatientFAQ.html"><span class="material-symbols-outlined">help</span>FAQ</a>
+            </nav>
+        </aside>
+    <main class="booking-section">
+        <div class="leftside">
+            <section class="specialist">
+                <h3 class="title">1. Choose a specialist</h3>
+                <select id="specialist-types" name="specialist">
+                    <option value="" disabled selected>Select a specialist</option>
+                    <option value="General Practitioner">General Practitioner</option>
+                    <option value="Cardiologist">Cardiologist</option>
+                    <option value="Dermatologist">Dermatologist</option>
+                    <option value="Neurologist">Neurologist</option>
+                    <option value="Orthopedist">Orthopedist</option>
+                    <option value="Endocrinologist">Endocrinologist</option>
+                    <option value="Ophthalmologist">Ophthalmologist</option>
+                </select>
+            </section>
+            <!-- Calendar Section -->
+            <section class="date-section">
+                <h3 class="title">2. Pick a date</h3>
+                <p id="results"></p>
+                <div id="booking-calendar"></div>
+            </section>
+
+            <!--Time section-->
+            <section class="time-section">
+                <h3 class="title">3. Select a time</h3>
+                <p class="subttile">Please select a date first</p>
+            </section>
+
+            <!--Appointment type section-->
+            <section class="appointment-type">
+                <h3 class="title">4. Select Appointment Type</h3>
+                <select id="appointment-type" name="apointmentType">
+                    <option value="" disabled selected>Select Appointment Type</option>
+                    <option value="Check-Up">Check-Up</option>
+                    <option value="Follow-Up">Follow-up</option>
+                    <option value="Consultation">Consultation</option>
+                    <option value="Urgent Consultation">Urgent Consultation</option>
+                </select>
+            </section>
+            <!--Might implement later
+            <section class="visit-type">
+                <h3 class="title">5. Pick Visit Type</h3>
+                <p class="visit-option">In-person</p>
+                <p class="visit-option">Virtual</p>
+            </section>-->
+            <section class="reason-visit">
+                <h3 class="title"> 6. Reason for visit<span id="optional">(optional)</span></h3>
+                <textarea placeholder="Briefly describe the reason for your visit..."></textarea>
+            </section>
+        </div>
+        <div class="rightside">
+            <div class="book-summary-sec">
+            <h3 class="title booking-summary">Booking Summary</h3>
+                <div class="sum-options">
+                <p class="sum-option">Specialist <span class="value">-</span></p>
+                <p class="sum-option">Date <span class="value ">-</span></p>
+                <p class="sum-option">Time <span class="value">-</span></p>
+                <p class="sum-option">Appointment Type <span class="value">-</span></p>
+                <!--<p class="sum-option">Visit Type <span class="value">x</span></p>-->
+                </div>
+                <div class="btn-section">
+                    <button id="confirmbtn"><span class="material-symbols-outlined">check_small</span>Confirm Booking</button>
+                </div>
+            </div>
+        </div>   
+        <div id="booking-popup" class="popup">
+            <p></p>
+        </div>     
+                    
+    </main>
+    </div>
+    <script src="PatientBooking.js"></script>
+    
+</body>
+</html>
